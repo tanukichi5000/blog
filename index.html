@@ -1,22 +1,23 @@
--<div id="loader-wrapper">
-  <div class="loader">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="subline"></div>
-    <div class="subline"></div>
-    <div class="subline"></div>
-    <div class="subline"></div>
-    <div class="subline"></div>
-    <div class="loader-circle-1"><div class="loader-circle-2"></div></div>
-    <div class="needle"></div>
-    <div class="loading">Loading</div>
-  </div>
-</div>
-  <meta name="googlesite-verification" content="LwKK6EoMmoCzDgWbTxEO0CzrjogAWNzatGl0NpWVqTQ" /><body>
+---
+layout: default
+---
+<div class="container">
+	<div class="row">
+		{% if site.posts.size > 0 %}
+		{%- for post in paginator.posts -%}
+		{% if forloop.index <= 1 %} <div class="col col-12">
+			<article class="article-first">
+				<div class="article-image-first" style="background-image: url({{" /img/" | prepend: site.baseurl | append :
+					post.image}})">
+					<!-- <div class="shi-box"> -->
+					<div class="article-content-first shi-box">
+						<div class="article-tag">
+							{% if post.tags.size >= 1 %}
+							{% for tag in post.tags %}
+							<a href="{{ site.baseurl }}/tags#{{tag}}" class="tag">{{ tag }}</a>
+							{% endfor %}
+							{% else %} {% endif %}
+						</div>
 <head>
 <center><h2>只今、緊急メンテナンス中です。<br>ご迷惑をおかけしております。</h2></center>
 <center><br><img src="https://illust8.com/wp-content/uploads/2020/09/cute_cat_pekori_11057.png"><center>
